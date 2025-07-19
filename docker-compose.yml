@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: hospital_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: hospital_db
+      MYSQL_USER: hospital_user
+      MYSQL_PASSWORD: secret_password
+      MYSQL_ROOT_PASSWORD: root_password
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3308:3306"
+
+  web:
+    build:
+      context: ./be
+      dockerfile: Dockerfile
+    container_name: hospital_web
+    restart: unless-stopped
+    # production dùng Gunicorn; dev có thể override CMD nếu muốn runserver
+    environment:
+      DATABASE_HOST: db
+      DATABASE_NAME: hospital_db
+      DATABASE_USER: hospital_user
+      DATABASE_PASSWORD: secret_password
+      DJANGO_SECRET_KEY: your_django_secret_key
+      DJANGO_DEBUG: "False"
+    volumes:
+      - ./be:/app
+    ports:
+      - "8001:8000"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
