@@ -31,7 +31,7 @@ function Navbar() {
       <div style={navContainerStyles}>
         <div style={logoStyles}>
           <HospitalIcon size={32} color="#ffffff" />
-          <span style={logoTextStyles}>Hospital Portal</span>
+          <span style={logoTextStyles}>Cổng thông tin bệnh viện</span>
         </div>
         <div style={navLinksStyles}>
           {navItems.map((item) => {
@@ -67,12 +67,12 @@ function Navbar() {
             );
           })}
         </div>
-        <div style={userInfoStyles}>
+        {/* <div style={userInfoStyles}>
           <span style={userNameStyles}>Admin User</span>
           <div style={avatarStyles}>
             <ProfileIcon size={20} color="#ffffff" />
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

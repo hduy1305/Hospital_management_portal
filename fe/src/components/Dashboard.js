@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-  DashboardIcon, 
   UsersIcon, 
   DocumentsIcon, 
   CalendarIcon,
@@ -176,14 +175,14 @@ function Dashboard() {
               fontWeight: '500',
               textShadow: '0 1px 2px rgba(0,0,0,0.2)'
             }}>
-              Dashboard - Tổng quan hoạt động hôm nay
+              	78 Giải Phóng, Đống Đa, Hà Nội
             </p>
           </div>
         </div>
       </div>
 
       <div className="card fade-in">
-        <h1 style={{ 
+        {/* <h1 style={{ 
           margin: '0 0 24px 0', 
           color: 'var(--neutral-800)', 
           fontSize: '2.5rem',
@@ -194,7 +193,7 @@ function Dashboard() {
         }}>
           <DashboardIcon size={40} color="var(--medical-600)" />
           Dashboard - Quản lý Bệnh viện
-        </h1>
+        </h1> */}
         <p style={{ 
           color: 'var(--neutral-600)', 
           margin: '0 0 40px 0', 
@@ -206,97 +205,40 @@ function Dashboard() {
 
         {/* Statistics Cards với Enhanced Design */}
         <div className="stats-grid">
-          {stats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div 
-                key={index} 
-                className="stat-card scale-in" 
-                style={{ 
-                  background: 'linear-gradient(145deg, #ffffff 0%, var(--medical-50) 100%)',
-                  animationDelay: `${index * 0.15}s`,
-                  border: `3px solid var(--medical-200)`,
-                  boxShadow: `
-                    0 20px 40px rgba(22, 163, 74, 0.15),
-                    0 10px 20px rgba(0, 0, 0, 0.1),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.8)
-                  `,
-                  position: 'relative',
-                  overflow: 'hidden'
-                }}
-              >
-                {/* Decorative background pattern */}
-                <div style={{
-                  position: 'absolute',
-                  top: '-50%',
-                  right: '-20%',
-                  width: '150px',
-                  height: '150px',
-                  background: 'linear-gradient(45deg, var(--medical-100), var(--medical-200))',
-                  borderRadius: '50%',
-                  opacity: 0.7,
-                  filter: 'blur(20px)'
-                }}></div>
-                
-                <div style={{ 
-                  fontSize: '3rem', 
-                  marginBottom: '20px', 
-                  display: 'flex', 
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  gap: '16px',
-                  padding: '24px',
-                  background: 'linear-gradient(135deg, var(--medical-50), white)',
-                  borderRadius: 'var(--radius-xl)',
-                  border: `3px solid var(--medical-200)`,
-                  boxShadow: '0 8px 16px rgba(22, 163, 74, 0.2)',
-                  position: 'relative',
-                  zIndex: 2
-                }}>
-                  <div style={{
-                    width: '60px',
-                    height: '60px',
-                    borderRadius: '50%',
-                    overflow: 'hidden',
-                    border: '3px solid var(--medical-300)',
-                    display: stat.image ? 'block' : 'none'
-                  }}>
-                    {stat.image && (
-                      <img 
-                        src={stat.image} 
-                        alt={stat.label}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover'
-                        }}
-                      />
-                    )}
-                  </div>
-                  <Icon size={48} color="var(--medical-600)" />
-                </div>
-                <div className="stat-number" style={{
-                  color: 'var(--medical-700)',
-                  fontSize: '4rem',
-                  fontWeight: '900',
-                  lineHeight: '1',
-                  marginBottom: '12px',
-                  textShadow: '0 4px 8px rgba(0,0,0,0.15)',
-                  filter: 'contrast(1.3) brightness(1.1)',
-                  position: 'relative',
-                  zIndex: 2
-                }}>{stat.value}</div>
-                <div className="stat-label" style={{
-                  color: 'var(--medical-700)',
-                  fontWeight: '700',
-                  fontSize: '1.1rem',
-                  position: 'relative',
-                  zIndex: 2
-                }}>{stat.label}</div>
+          {stats.map((stat, index) => (
+            <div 
+              key={index} 
+              className="stat-card scale-in" 
+              style={{ 
+                background: '#fff',
+                animationDelay: `${index * 0.15}s`,
+                border: `2px solid var(--medical-200)`,
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
+                padding: '20px',
+                borderRadius: 'var(--radius-xl)',
+                textAlign: 'center'
+              }}
+            >
+              <div className="stat-number" style={{
+                color: 'var(--medical-700)',
+                fontSize: '3rem',
+                fontWeight: '900',
+                lineHeight: '1',
+                marginBottom: '10px'
+              }}>
+                {stat.value}
               </div>
-            );
-          })}
+              <div className="stat-label" style={{
+                color: 'var(--medical-600)',
+                fontWeight: '600',
+                fontSize: '1.1rem'
+              }}>
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
+
 
         {/* Recent Activities với Enhanced Design */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', marginTop: '48px' }}>
@@ -715,7 +657,7 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* Enhanced Quick Actions */}
+        {/* Enhanced Quick Actions
         <div className="card fade-in" style={{ 
           marginTop: '32px',
           background: 'linear-gradient(145deg, #ffffff 0%, var(--primary-50) 100%)',
@@ -804,7 +746,7 @@ function Dashboard() {
                   e.target.style.borderColor = `${action.color}30`;
                 }}
               >
-                {/* Background decoration */}
+                // Background decoration 
                 <div style={{
                   position: 'absolute',
                   top: '-50%',
@@ -850,7 +792,7 @@ function Dashboard() {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

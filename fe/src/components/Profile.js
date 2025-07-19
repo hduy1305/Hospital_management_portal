@@ -25,7 +25,7 @@ function Profile({ user }) {
     department: 'Ban Giám đốc',
     position: 'Quản trị viên',
     joinDate: '01/01/2025',
-    address: '123 Đường ABC, Quận 1, TP.HCM',
+    address: '123 Đường Nguyễn Trãi, Quận Hà Đông, Hà Nội',
     bio: 'Quản trị viên hệ thống với 10 năm kinh nghiệm trong lĩnh vực công nghệ thông tin y tế.'
   });
   const [activeTab, setActiveTab] = useState('info');
