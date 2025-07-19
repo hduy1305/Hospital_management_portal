@@ -129,7 +129,7 @@ function Dashboard() {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'linear-gradient(135deg, rgba(22, 163, 74, 0.8) 0%, rgba(14, 165, 233, 0.6) 100%)',
+          background: 'linear-gradient(135deg, rgba(22, 163, 74, 0.12) 0%, rgba(14, 164, 233, 0.17) 100%)',
           zIndex: 1
         }}></div>
         <div style={{
@@ -175,7 +175,7 @@ function Dashboard() {
               fontWeight: '500',
               textShadow: '0 1px 2px rgba(0,0,0,0.2)'
             }}>
-              	78 Giải Phóng, Đống Đa, Hà Nội
+              	Số 96A Trần Phú, quận Hà Đông, Hà Nội.
             </p>
           </div>
         </div>
