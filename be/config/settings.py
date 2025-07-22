@@ -70,6 +70,9 @@ REST_FRAMEWORK = {
     ),
 }
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'        # nơi collectstatic gom file
 # STATICFILES_DIRS = [ BASE_DIR / 'static' ] 
