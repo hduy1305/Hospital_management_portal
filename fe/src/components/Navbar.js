@@ -16,7 +16,7 @@ function Navbar() {
   const location = useLocation();
 
   const navItems = [
-    { path: '/', label: 'Dashboard', icon: DashboardIcon },
+    { path: '/', label: 'Trang chủ', icon: DashboardIcon },
     { path: '/announcements', label: 'Thông báo', icon: AnnouncementsIcon },
     { path: '/documents', label: 'Tài liệu', icon: DocumentsIcon },
     { path: '/schedules', label: 'Lịch trực', icon: SchedulesIcon },
