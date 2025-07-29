@@ -9,8 +9,8 @@ urlpatterns = [
     path('api/', include('accounts.urls')),
     path('api/announcements/', include('announcements.urls')),
     path('api/documents/', include('documents.urls')),
-    # path('api/schedules/', include('schedules.urls')),
-    # path('api/staff_requests/', include('staff_requests.urls')),
+    path('api/schedules/', include('schedules.urls')),
+    path('api/requests/', include('staff_requests.urls')),
     # path('api/directory/', include('directory.urls')),
-    # path('api/dashboard/', include('dashboard.urls')),
+    path('api/dashboard/', include('dashboard.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
